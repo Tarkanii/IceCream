@@ -15,9 +15,11 @@
 
 // Components
 
+@import "./components/section";
 @import "./components/button";
 
 // Layout
 
 @import "./layout/header";
 @import "./layout/hero";
+@import "./layout/products";
