@@ -1,0 +1,32 @@
+.section-title {
+    color: var(--accent-color);
+    font-family: var(--special-font);
+    font-size: 34px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet {
+        font-size: 48px;
+    }
+
+    @include desktop {
+        font-size: 58px;
+    }
+}
+
+.section-subtitle {
+    color: var(--second-accent-color);
+    font-family: var(--special-font);
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+
+    @include tablet {
+        font-size: 26px;
+    }
+
+    @include desktop {
+        font-size: 30px;
+    }
+}

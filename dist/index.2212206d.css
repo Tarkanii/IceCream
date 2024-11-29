@@ -100,6 +100,47 @@ button:hover, button:focus {
   }
 }
 
+.section-title {
+  color: var(--accent-color);
+  font-family: var(--special-font);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 34px;
+}
+
+@media screen and (width >= 768px) {
+  .section-title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .section-title {
+    font-size: 58px;
+  }
+}
+
+.section-subtitle {
+  color: var(--second-accent-color);
+  font-family: var(--special-font);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+@media screen and (width >= 768px) {
+  .section-subtitle {
+    font-size: 26px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .section-subtitle {
+    font-size: 30px;
+  }
+}
+
 .button {
   min-height: 44px;
   color: var(--accent-color);
@@ -641,6 +682,188 @@ button:hover, button:focus {
 
 @media screen and (width >= 1200px) {
   .hero__additional-info__button__icon {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.products {
+  justify-content: center;
+  padding: 121px 0 98px;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .products {
+    padding: 122px 0 112px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .products {
+    padding: 127px 0 119px;
+  }
+}
+
+.products__title {
+  margin-bottom: 141px;
+}
+
+@media screen and (width >= 768px) {
+  .products__title {
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .products__title {
+    margin-bottom: 259px;
+  }
+}
+
+.product-list {
+  flex-direction: column;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .product-list {
+    flex-direction: row;
+  }
+}
+
+.product-list__item {
+  border-radius: 24px;
+  flex-direction: column;
+  align-items: center;
+  padding: 161px 40px 40px;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (width >= 768px) {
+  .product-list__item {
+    width: calc(33.3333% - 13.3333px);
+    padding: 155px 11px 40px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .product-list__item {
+    padding: 170px 44px 50px;
+  }
+}
+
+.product-list__item.ice-cream {
+  background-color: var(--ice-cream-pink-bg);
+}
+
+.product-list__item.coffee {
+  background-color: var(--ice-cream-coffee-bg);
+}
+
+.product-list__item.shake {
+  background-color: var(--ice-cream-green-bg);
+}
+
+.product-list__item:not(:last-child) {
+  margin-bottom: 130px;
+}
+
+@media screen and (width >= 768px) {
+  .product-list__item:not(:last-child) {
+    margin-bottom: unset;
+    margin-right: 20px;
+  }
+}
+
+.product-list__item__img {
+  position: absolute;
+  top: -113px;
+}
+
+@media screen and (width >= 768px) {
+  .product-list__item__img {
+    top: -104px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .product-list__item__img {
+    top: -210px;
+  }
+}
+
+.product-list__item__name {
+  color: var(--clear-white);
+  font-family: var(--special-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+
+@media screen and (width >= 1200px) {
+  .product-list__item__name {
+    font-size: 30px;
+  }
+}
+
+.product-list__item__icon {
+  fill: var(--clear-white);
+  width: 26px;
+  height: 6px;
+  margin-bottom: 32px;
+}
+
+.product-list__item__text {
+  color: var(--clear-white);
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media screen and (width >= 1200px) {
+  .product-list__item__text {
+    margin-bottom: 62px;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
+
+.product-list__item__button {
+  background-color: var(--clear-white);
+  width: 40px;
+  height: 40px;
+  transition: background-color var(--transition);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (width >= 1200px) {
+  .product-list__item__button {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.product-list__item__button:hover, .product-list__item__button:focus {
+  background-color: var(--btn-hover);
+}
+
+.product-list__item__button__icon {
+  width: 14px;
+  height: 14px;
+  fill: var(--accent-color);
+}
+
+@media screen and (width >= 1200px) {
+  .product-list__item__button__icon {
     width: 9px;
     height: 9px;
   }
