@@ -1,12 +1,15 @@
 :root {
+    --font: "DM Sans", sans-serif;
+
     --accent-color: #D41443;
     --second-accent-color: #FFA5BA;
     --primary-text-color: #000000;
     --secondary-text-color: #907E82;
-    --icon-color: #FFFFFF;
+    --clear-white: #FFFFFF;
     --accent-btn-hover: #C7133E;
-    --btn-hover-color: #ECEBEB;
+    --btn-hover: #ECEBEB;
 
+    --menu-bg: #E17992;
     --hero-bg: #FFB8CA;
     --primary-bg: #FFF5F6;
     --ice-cream-pink-bg: #FFB8CA;
@@ -17,6 +20,12 @@
 
     --mobile-menu-border: #E18298;
     --footer-border: #E1E1E1;
+
+    --transition: ease-in 200ms;
+
+    --mobile-max-width: 320px;
+    --tablet-max-width: 768px;
+    --desktop-max-width: 1200px;
 }
 
 $tablet-break-point: 768px;
