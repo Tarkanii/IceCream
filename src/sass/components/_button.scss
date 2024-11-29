@@ -1,0 +1,25 @@
+.button {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 37px;
+    color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 22px;
+    background-color: var(--clear-white);
+    transition: background-color var(--transition);
+
+    &:hover, &:focus {
+        cursor: pointer;
+        background-color: var(--btn-hover);
+    }
+
+    &__icon {
+        height: 10px;
+        width: 10px;
+        margin-left: 10px;
+        fill: none;
+        stroke: var(--accent-color);
+    }
+}

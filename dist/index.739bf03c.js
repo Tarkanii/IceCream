@@ -597,7 +597,60 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"ebWYT":[function(require,module,exports,__globalThis) {
 var _mainScss = require("../sass/main.scss");
+var _menu = require("./menu");
+document.addEventListener("DOMContentLoaded", ()=>{
+    (0, _menu.menuHandler)();
+});
 
-},{"../sass/main.scss":"dFl68"}],"dFl68":[function() {},{}]},["8G2QE","ebWYT"], "ebWYT", "parcelRequire94c2")
+},{"../sass/main.scss":"dFl68","./menu":"dTgwB"}],"dFl68":[function() {},{}],"dTgwB":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "menuHandler", ()=>menuHandler);
+const menuHandler = ()=>{
+    const menuOpenButton = document.querySelector("#menu-open");
+    const menuCloseButton = document.querySelector("#menu-close");
+    const menu = document.querySelector(".mobile-menu");
+    menuOpenButton.addEventListener("click", ()=>{
+        if (!menu.classList.contains("is-open")) {
+            menu.classList.add("is-open");
+            setTimeout(()=>menuCloseButton.focus(), 200);
+        }
+    });
+    menuCloseButton.addEventListener("click", ()=>{
+        if (menu.classList.contains("is-open")) menu.classList.remove("is-open");
+    });
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["8G2QE","ebWYT"], "ebWYT", "parcelRequire94c2")
 
 //# sourceMappingURL=index.739bf03c.js.map
