@@ -1,0 +1,250 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    background-color: var(--hero-bg);
+    background-image: url(../images/hero/hero-ice-bg.png), url(../images/hero/hero-circle-bg.png);
+    background-size: 171px 410px, 346px 346px;
+    background-position: bottom 0 right calc(100% / 2 - 32px), bottom 75px right calc(100% / 2 - 43px);
+    background-repeat: no-repeat;
+
+    @include retina-display {
+        background-image: url(../images/hero/hero-ice-bg@2x.png), url(../images/hero/hero-circle-bg@2x.png);
+    }
+
+    @include tablet {
+        background-image: url(../images/hero/hero-ice-bg.png), url(../images/hero/hero-girl-bg.png), url(../images/hero/hero-milk-bg.png), url(../images/hero/hero-circle-bg.png);
+        background-size: 143px 336px, 168px 133px, 124px 126px, 324px 322px;
+        background-position: bottom 0 right calc(100% / 2 - 60px), bottom 0 right calc(100% / 2 - 270px), bottom 28px left calc(100% / 2 - 290px), bottom 46px right calc(100% / 2 - 83px);
+
+        @include retina-display {
+            background-image: url(../images/hero/hero-ice-bg@2x.png), url(../images/hero/hero-girl-bg@2x.png), url(../images/hero/hero-milk-bg@2x.png), url(../images/hero/hero-circle-bg@2x.png);
+        }
+    }
+
+    @include desktop {
+        background-size: 236px 557px, 293px 232px, 188px 191px, 538px 538px;
+        background-position: bottom 0 right calc(100% / 2 - 100px), bottom 0 right calc(100% / 2 - 415px), bottom 28px left calc(100% / 2 - 475px), bottom 70px right calc(100% / 2 - 140px);
+    }
+
+    & .container {
+        position: relative;
+        padding-top: 190px;
+        padding-bottom: 160px;
+
+        @include tablet {
+            padding-top: 102px;
+            padding-bottom: 173px;
+        }
+
+        @include desktop {
+            padding-top: 171px;
+            padding-bottom: 292px;
+        }
+    }
+
+    &__title {
+        color: var(--clear-white);
+        font-family: var(--special-font);
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+        @include tablet {
+            font-size: 22px;
+        }
+
+        @include desktop {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        & .passion {
+            color: var(--accent-color);
+            font-size: 48px;
+
+            @include tablet {
+                font-size: 34px;
+            }
+
+            @include desktop {
+                font-size: 58px;
+            }
+        }
+    }
+
+    &__main-content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.hero__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.hero__buttons-wrapper {
+    display: flex;
+
+    .how-made-button, .products-button {
+        font-size: 8px;
+        padding: 9px 15px 9px 14px;
+        border-radius: 20px;
+
+        @include desktop {
+            font-size: 14px;
+            padding: 12px 23px;
+        }
+    }
+
+    .products-button {
+        color: var(--clear-white);
+        background-color: var(--accent-color);
+        margin-right: 8px;
+        transition: background-color var(--transition);
+
+        &:hover, &:focus {
+            background-color: var(--accent-btn-hover);
+        }
+
+        @include desktop {
+            margin-right: 15px;
+        }
+    }
+
+    .how-made-button {
+        color: var(--accent-color);
+        background-color: var(--clear-white);
+        transition: background-color var(--transition);
+
+        &:hover, &:focus {
+            background-color: var(--btn-hover);
+        }
+    }
+}
+
+.hero__cafes-list {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
+
+.hero__cafes-list__element {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 9px;
+
+    @include desktop {
+        padding-right: 0;
+    }
+
+    &:first-child {
+        margin-bottom: 13px;
+    }
+
+    .amount {
+        position: relative;
+        z-index: 2;
+        color: var(--accent-color);
+        font-family: var(--special-font);
+        font-size: 28px;
+
+        @include desktop {
+            font-size: 46px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            right: -9px;
+            z-index: -1;
+            display: block;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background-color: var(--clear-white);
+
+            @include desktop {
+                height: 30px;
+                width: 30px;
+                top: -3px;
+                right: -19px;
+            }
+        }
+    }
+
+    .type {
+        color: var(--clear-white);
+        font-size: 8px;
+
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+}
+
+.hero__additional-info {
+    display: none;
+
+    @include tablet {
+        display: block;
+        position: absolute;
+        bottom: 34px;
+        left: 154px;
+    }
+
+    @include desktop {
+        bottom: 56px;
+        left: 255px;
+    }
+}
+
+.hero__additional-info__text {
+    color: var(--clear-white);
+    font-size: 8px;
+    max-width: 115px;
+    margin-bottom: 7px;
+
+    @include desktop {
+        font-size: 14px;
+        max-width: 200px;
+        margin-bottom: 15px;
+    }
+}
+
+.hero__additional-info__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: var(--clear-white);
+    transition: background-color var(--transition);
+
+    @include desktop {
+        height: 26px;
+        width: 26px;
+    }
+
+    &:hover, &:focus {
+        background-color: var(--btn-hover);
+    }
+
+    &__icon {
+        height: 6px;
+        width: 6px;
+        fill: var(--accent-color);
+
+        @include desktop {
+            height: 9px;
+            width: 9px;
+        }
+    }
+}
