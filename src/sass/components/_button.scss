@@ -1,6 +1,7 @@
 .button {
     display: flex;
     align-items: center;
+    justify-content: center;
     min-height: 44px;
     padding: 0 37px;
     color: var(--accent-color);
@@ -20,5 +21,18 @@
         margin-left: 10px;
         fill: none;
         stroke: var(--accent-color);
+    }
+
+    &.button--accent {
+        color: var(--clear-white);
+        background-color: var(--accent-color);
+
+        &:hover, &:focus {
+            background-color: var(--accent-btn-hover);
+        }
+    }
+
+    &.button--accent &__icon {
+        stroke: var(--clear-white);
     }
 }

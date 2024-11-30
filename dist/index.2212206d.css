@@ -11,13 +11,14 @@
   --menu-bg: #e17992;
   --hero-bg: #ffb8ca;
   --primary-bg: #fff5f6;
-  --ice-cream-pink-bg: #ffb8ca;
-  --ice-cream-coffee-bg: #f0d1a5;
-  --ice-cream-green-bg: #c2e297;
+  --pink-bg: #ffb8ca;
+  --coffee-bg: #f0d1a5;
+  --green-bg: #c2e297;
   --quotes-bg: #fafafa;
   --quotes-btn-bg: #d9d9d9;
   --mobile-menu-border: #e18298;
-  --footer-border: #e1e1e1;
+  --primary-border: #e1e1e1;
+  --contacts-shadow: #d414431a;
   --transition: ease-in .2s;
   --mobile-max-width: 320px;
   --tablet-max-width: 768px;
@@ -147,6 +148,7 @@ button:hover, button:focus {
   background-color: var(--clear-white);
   transition: background-color var(--transition);
   border-radius: 22px;
+  justify-content: center;
   align-items: center;
   padding: 0 37px;
   font-size: 16px;
@@ -164,6 +166,19 @@ button:hover, button:focus {
   height: 10px;
   stroke: var(--accent-color);
   margin-left: 10px;
+}
+
+.button.button--accent {
+  color: var(--clear-white);
+  background-color: var(--accent-color);
+}
+
+.button.button--accent:hover, .button.button--accent:focus {
+  background-color: var(--accent-btn-hover);
+}
+
+.button.button--accent .button__icon {
+  stroke: var(--clear-white);
 }
 
 .header {
@@ -755,15 +770,15 @@ button:hover, button:focus {
 }
 
 .product-list__item.ice-cream {
-  background-color: var(--ice-cream-pink-bg);
+  background-color: var(--pink-bg);
 }
 
 .product-list__item.coffee {
-  background-color: var(--ice-cream-coffee-bg);
+  background-color: var(--coffee-bg);
 }
 
 .product-list__item.shake {
-  background-color: var(--ice-cream-green-bg);
+  background-color: var(--green-bg);
 }
 
 .product-list__item:not(:last-child) {
@@ -894,7 +909,7 @@ button:hover, button:focus {
 
 @media screen and (width >= 1200px) {
   .how-made {
-    background-image: url("desktop-milk-bg.128f3650.png");
+    background-image: url("desktop-milk-bg@2x.4be0bf72.png");
     background-size: 1282px 534px;
   }
 }
@@ -1146,7 +1161,7 @@ button:hover, button:focus {
 .review-list__element__quote-wrapper .quotes {
   width: 54px;
   height: 40px;
-  fill: var(--footer-border);
+  fill: var(--primary-border);
   position: absolute;
   top: 28px;
   left: 61px;
@@ -1161,7 +1176,7 @@ button:hover, button:focus {
 .review-list__element__quote {
   z-index: 2;
   text-align: center;
-  background-image: linear-gradient(to bottom, transparent 0 31px, var(--footer-border) 31px 100%);
+  background-image: linear-gradient(to bottom, transparent 0 31px, var(--primary-border) 31px 100%);
   background-size: 100% 32px;
   max-width: 157px;
   padding-bottom: 5px;
@@ -1226,5 +1241,259 @@ button:hover, button:focus {
   width: 12px;
   height: 12px;
   fill: var(--accent-color);
+}
+
+.contacts {
+  background-image: linear-gradient(to bottom, var(--clear-white) 0 84px, var(--primary-bg) 84px 100%);
+  justify-content: center;
+  padding-bottom: 113px;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .contacts {
+    background-image: linear-gradient(to bottom, var(--clear-white) 0 78px, var(--primary-bg) 78px 100%);
+    padding-bottom: 158px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .contacts {
+    background-image: url("contacts-bg.d3286b1d.png"), linear-gradient(to bottom, var(--clear-white) 0 102px, var(--primary-bg) 102px 100%);
+    background-position: right 50% top 102px, right 0 top 0;
+    background-repeat: no-repeat;
+    background-size: 1280px 382px, auto;
+    padding-bottom: 165px;
+  }
+}
+
+@media screen and (width >= 1200px) and (min-device-pixel-ratio: 2), screen and (width >= 1200px) and (resolution >= 192dpi), screen and (width >= 1200px) and (resolution >= 2x) {
+  .contacts {
+    background-image: url("contacts-bg@2x.4f30cea8.png"), linear-gradient(to bottom, var(--clear-white) 0 102px, var(--primary-bg) 102px 100%);
+  }
+}
+
+.stores-list {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 54px;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .stores-list {
+    flex-direction: row;
+    margin-bottom: 81px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .stores-list {
+    margin-bottom: 86px;
+  }
+}
+
+.stores-list__element {
+  background-color: var(--clear-white);
+  max-width: 220px;
+  box-shadow: 0 8px 30px var(--contacts-shadow);
+  border-radius: 24px;
+  padding: 43px 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media screen and (width >= 768px) {
+  .stores-list__element {
+    padding: 50px 31px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .stores-list__element {
+    max-width: 330px;
+    padding: 51px 44px;
+    font-size: 16px;
+  }
+}
+
+.stores-list__element:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media screen and (width >= 768px) {
+  .stores-list__element:not(:last-child) {
+    margin-bottom: unset;
+    margin-right: 20px;
+  }
+}
+
+.stores-list__element__type {
+  color: var(--clear-white);
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  padding: 2px 25px;
+  line-height: 1;
+  display: inline-block;
+}
+
+@media screen and (width >= 768px) {
+  .stores-list__element__type {
+    margin-bottom: 30px;
+    padding: 7px 14px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .stores-list__element__type {
+    margin-bottom: 32px;
+  }
+}
+
+.stores-list__element__type.cafe {
+  background-color: var(--coffee-bg);
+}
+
+.stores-list__element__type.foodtruck {
+  background-color: var(--green-bg);
+}
+
+.stores-list__element__city {
+  margin-bottom: 10px;
+}
+
+@media screen and (width >= 768px) {
+  .stores-list__element__city {
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .stores-list__element__city {
+    margin-bottom: 10px;
+  }
+}
+
+.stores-list__element__description {
+  color: var(--secondary-text-color);
+  margin-bottom: 25px;
+}
+
+@media screen and (width >= 768px) {
+  .stores-list__element__description {
+    margin-bottom: 30px;
+    line-height: 1.66;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .stores-list__element__description {
+    margin-bottom: 32px;
+    line-height: 1.83;
+  }
+}
+
+.stores-list__element__address {
+  flex-direction: column;
+  align-items: start;
+  line-height: 1.5;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .stores-list__element__address {
+    line-height: 1.83;
+  }
+}
+
+.stores-list__element__address__link {
+  color: var(--secondary-text-color);
+}
+
+.open-hours-list {
+  border-top: 1px solid var(--primary-border);
+  border-bottom: 1px solid var(--primary-border);
+  margin-bottom: 25px;
+  padding: 25px 0;
+}
+
+@media screen and (width >= 768px) {
+  .open-hours-list {
+    margin-bottom: 30px;
+    padding: 30px 0;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .open-hours-list {
+    margin-bottom: 32px;
+    padding: 32px 0;
+  }
+}
+
+.open-hours-list__element {
+  line-height: 1.91;
+}
+
+@media screen and (width >= 768px) {
+  .open-hours-list__element {
+    line-height: 1.84;
+  }
+}
+
+.open-hours-list__element:first-child {
+  margin-bottom: 10px;
+}
+
+.open-hours-list__element__hours {
+  color: var(--second-accent-color);
+}
+
+.contacts__buttons-container {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .contacts__buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.contacts__buttons-container .contacts__button {
+  width: 161px;
+  padding: 0;
+}
+
+@media screen and (width >= 768px) {
+  .contacts__buttons-container .contacts__button {
+    width: auto;
+    padding: 0 39px;
+  }
+}
+
+.contacts__buttons-container .contacts__button:first-child {
+  margin-bottom: 10px;
+}
+
+@media screen and (width >= 768px) {
+  .contacts__buttons-container .contacts__button:first-child {
+    margin-bottom: unset;
+    margin-right: 14.5px;
+  }
+
+  .contacts__buttons-container .contacts__button.button--accent {
+    padding: 0 34px 0 30px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .contacts__buttons-container .contacts__button.button--accent {
+    padding: 0 35px;
+  }
 }
 /*# sourceMappingURL=index.2212206d.css.map */
