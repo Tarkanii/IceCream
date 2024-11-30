@@ -598,11 +598,13 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"ebWYT":[function(require,module,exports,__globalThis) {
 var _mainScss = require("../sass/main.scss");
 var _menu = require("./menu");
+var _slider = require("./slider");
 document.addEventListener("DOMContentLoaded", ()=>{
     (0, _menu.menuHandler)();
+    (0, _slider.sliderHandler)();
 });
 
-},{"../sass/main.scss":"dFl68","./menu":"dTgwB"}],"dFl68":[function() {},{}],"dTgwB":[function(require,module,exports,__globalThis) {
+},{"../sass/main.scss":"dFl68","./menu":"dTgwB","./slider":"aMYz0"}],"dFl68":[function() {},{}],"dTgwB":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "menuHandler", ()=>menuHandler);
@@ -651,6 +653,33 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["8G2QE","ebWYT"], "ebWYT", "parcelRequire94c2")
+},{}],"aMYz0":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "sliderHandler", ()=>sliderHandler);
+const sliderHandler = ()=>{
+    const sliderButtons = document.querySelectorAll(".slider-button");
+    const selectedBtnHTML = document.querySelector(".slider-button.selected").innerHTML;
+    sliderButtons.forEach((btn)=>{
+        btn.addEventListener("click", ()=>{
+            // Removing .selected class from each button before adding it to the right one; 
+            sliderButtons.forEach((button)=>{
+                if (button.classList.contains("selected")) {
+                    button.classList.remove("selected");
+                    button.innerHTML = "";
+                }
+            });
+            btn.classList.add("selected");
+            btn.innerHTML = selectedBtnHTML;
+            const clientId = btn.getAttribute("data-id");
+            document.querySelector(`[data-client=c${clientId}]`).scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        });
+    });
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8G2QE","ebWYT"], "ebWYT", "parcelRequire94c2")
 
 //# sourceMappingURL=index.739bf03c.js.map
