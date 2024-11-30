@@ -1,23 +1,24 @@
 .contacts {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to bottom, var(--clear-white) 0 84px, var(--primary-bg) 84px 100%);
+    background-image: linear-gradient(to bottom, var(--clear-white) 0 170px, var(--primary-bg) 170px 100%);
+    padding-top: 86px;
     padding-bottom: 113px;
 
     @include tablet {
-        background-image: linear-gradient(to bottom, var(--clear-white) 0 78px, var(--primary-bg) 78px 100%);
+        background-image: linear-gradient(to bottom, var(--clear-white) 0 164px, var(--primary-bg) 164px 100%);
         padding-bottom: 158px;
     }
 
     @include desktop {
-        background-image: url(../images/contacts/contacts-bg.png), linear-gradient(to bottom, var(--clear-white) 0 102px, var(--primary-bg) 102px 100%);
+        background-image: url(../images/contacts/contacts-bg.png), linear-gradient(to bottom, var(--clear-white) 0 188px, var(--primary-bg) 188px 100%);
         background-size: 1280px 382px, auto;
-        background-position: top 102px right 50%, top 0 right 0;
+        background-position: top 188px right 50%, top 0 right 0;
         background-repeat: no-repeat;
         padding-bottom: 165px;
 
         @include retina-display {
-            background-image: url(../images/contacts/contacts-bg@2x.png), linear-gradient(to bottom, var(--clear-white) 0 102px, var(--primary-bg) 102px 100%);
+            background-image: url(../images/contacts/contacts-bg@2x.png), linear-gradient(to bottom, var(--clear-white) 0 188px, var(--primary-bg) 188px 100%);
         }
     }
 }
