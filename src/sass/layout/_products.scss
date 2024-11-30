@@ -51,15 +51,15 @@
     }
 
     &.ice-cream {
-        background-color: var(--ice-cream-pink-bg);
+        background-color: var(--pink-bg);
     }
 
     &.coffee{
-        background-color: var(--ice-cream-coffee-bg);
+        background-color: var(--coffee-bg);
     }
 
     &.shake {
-        background-color: var(--ice-cream-green-bg);
+        background-color: var(--green-bg);
     }
 
     &:not(:last-child) {
