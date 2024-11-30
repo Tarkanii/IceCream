@@ -1090,7 +1090,6 @@ button:hover, button:focus {
 
 .reviews .container {
   padding-top: 80px;
-  padding-bottom: 86px;
 }
 
 .reviews__collage {
@@ -1244,23 +1243,24 @@ button:hover, button:focus {
 }
 
 .contacts {
-  background-image: linear-gradient(to bottom, var(--clear-white) 0 84px, var(--primary-bg) 84px 100%);
+  background-image: linear-gradient(to bottom, var(--clear-white) 0 170px, var(--primary-bg) 170px 100%);
   justify-content: center;
+  padding-top: 86px;
   padding-bottom: 113px;
   display: flex;
 }
 
 @media screen and (width >= 768px) {
   .contacts {
-    background-image: linear-gradient(to bottom, var(--clear-white) 0 78px, var(--primary-bg) 78px 100%);
+    background-image: linear-gradient(to bottom, var(--clear-white) 0 164px, var(--primary-bg) 164px 100%);
     padding-bottom: 158px;
   }
 }
 
 @media screen and (width >= 1200px) {
   .contacts {
-    background-image: url("contacts-bg.d3286b1d.png"), linear-gradient(to bottom, var(--clear-white) 0 102px, var(--primary-bg) 102px 100%);
-    background-position: right 50% top 102px, right 0 top 0;
+    background-image: url("contacts-bg.d3286b1d.png"), linear-gradient(to bottom, var(--clear-white) 0 188px, var(--primary-bg) 188px 100%);
+    background-position: right 50% top 188px, right 0 top 0;
     background-repeat: no-repeat;
     background-size: 1280px 382px, auto;
     padding-bottom: 165px;
@@ -1269,7 +1269,7 @@ button:hover, button:focus {
 
 @media screen and (width >= 1200px) and (min-device-pixel-ratio: 2), screen and (width >= 1200px) and (resolution >= 192dpi), screen and (width >= 1200px) and (resolution >= 2x) {
   .contacts {
-    background-image: url("contacts-bg@2x.4f30cea8.png"), linear-gradient(to bottom, var(--clear-white) 0 102px, var(--primary-bg) 102px 100%);
+    background-image: url("contacts-bg@2x.4f30cea8.png"), linear-gradient(to bottom, var(--clear-white) 0 188px, var(--primary-bg) 188px 100%);
   }
 }
 

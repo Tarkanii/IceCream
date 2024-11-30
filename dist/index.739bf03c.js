@@ -597,14 +597,16 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"ebWYT":[function(require,module,exports,__globalThis) {
 var _mainScss = require("../sass/main.scss");
+var _scroll = require("./scroll");
 var _menu = require("./menu");
 var _slider = require("./slider");
 document.addEventListener("DOMContentLoaded", ()=>{
+    (0, _scroll.scrollHandler)();
     (0, _menu.menuHandler)();
     (0, _slider.sliderHandler)();
 });
 
-},{"../sass/main.scss":"dFl68","./menu":"dTgwB","./slider":"aMYz0"}],"dFl68":[function() {},{}],"dTgwB":[function(require,module,exports,__globalThis) {
+},{"../sass/main.scss":"dFl68","./menu":"dTgwB","./slider":"aMYz0","./scroll":"55W1t"}],"dFl68":[function() {},{}],"dTgwB":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "menuHandler", ()=>menuHandler);
@@ -675,6 +677,26 @@ const sliderHandler = ()=>{
             document.querySelector(`[data-client=c${clientId}]`).scrollIntoView({
                 behavior: "smooth",
                 block: "nearest"
+            });
+        });
+    });
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"55W1t":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "scrollHandler", ()=>scrollHandler);
+const scrollHandler = ()=>{
+    const links = document.querySelectorAll("a[href^=\\#]");
+    const menu = document.querySelector(".mobile-menu");
+    links.forEach((link)=>{
+        link.addEventListener("click", (e)=>{
+            e.preventDefault();
+            if (menu.classList.contains("is-open")) menu.classList.remove("is-open");
+            const destination = link.getAttribute("href").split("#")[1];
+            document.getElementById(destination).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
             });
         });
     });
