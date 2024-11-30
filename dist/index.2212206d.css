@@ -1410,6 +1410,11 @@ button:hover, button:focus {
 
 .stores-list__element__address__link {
   color: var(--secondary-text-color);
+  transition: var(--transition);
+}
+
+.stores-list__element__address__link:hover, .stores-list__element__address__link:focus {
+  color: var(--second-accent-color);
 }
 
 .open-hours-list {
@@ -1494,6 +1499,194 @@ button:hover, button:focus {
 @media screen and (width >= 1200px) {
   .contacts__buttons-container .contacts__button.button--accent {
     padding: 0 35px;
+  }
+}
+
+.footer {
+  background-color: var(--primary-bg);
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.footer__container {
+  padding-bottom: 43px;
+}
+
+@media screen and (width >= 768px) {
+  .footer__container {
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 91px;
+    display: flex;
+  }
+}
+
+.footer__slogan {
+  color: var(--second-accent-color);
+  font-family: var(--special-font);
+  text-transform: uppercase;
+  flex-direction: column;
+  margin-bottom: 43px;
+  font-size: 18px;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .footer__slogan {
+    max-width: 340px;
+    margin-bottom: unset;
+    font-size: 26px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .footer__slogan {
+    max-width: unset;
+    font-size: 30px;
+  }
+}
+
+.footer__slogan .passion {
+  color: var(--accent-color);
+  max-width: 200px;
+  margin-top: 17px;
+  font-size: 34px;
+}
+
+@media screen and (width >= 768px) {
+  .footer__slogan .passion {
+    max-width: 340px;
+    font-size: 48px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .footer__slogan .passion {
+    max-width: unset;
+    font-size: 58px;
+  }
+}
+
+.footer__contacts {
+  flex-direction: column;
+  align-items: end;
+  display: flex;
+}
+
+.footer__contacts__text {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.83;
+}
+
+@media screen and (width >= 768px) {
+  .footer__contacts__text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .footer__contacts__text {
+    font-size: 16px;
+  }
+}
+
+.footer__contacts__link {
+  color: var(--accent-color);
+  transition: color var(--transition);
+}
+
+.footer__contacts__link:hover, .footer__contacts__link:focus {
+  color: var(--second-accent-color);
+}
+
+.footer__socials-list {
+  margin-bottom: 46px;
+  display: flex;
+}
+
+@media screen and (width >= 1200px) {
+  .footer__socials-list {
+    margin-bottom: 50px;
+  }
+}
+
+.footer__socials-list__element:not(:last-child) {
+  margin-right: 28px;
+}
+
+@media screen and (width >= 768px) {
+  .footer__socials-list__element:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .footer__socials-list__element:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.footer__socials-list__element__link {
+  background-color: var(--second-accent-color);
+  width: 32px;
+  height: 32px;
+  transition: background-color var(--transition);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .footer__socials-list__element__link {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.footer__socials-list__element__link:hover, .footer__socials-list__element__link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer__socials-list__element__icon {
+  fill: var(--clear-white);
+  width: 20px;
+  height: 20px;
+}
+
+.copyright-container {
+  color: var(--secondary-text-color);
+  text-align: center;
+  border-top: 1px solid var(--primary-border);
+  justify-content: center;
+  width: 100%;
+  padding: 22px 0 25px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .copyright-container {
+    padding: 29px 0 18px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .copyright-container {
+    padding: 10px 0;
+  }
+}
+
+.copyright-container .copyright {
+  max-width: 150px;
+}
+
+@media screen and (width >= 768px) {
+  .copyright-container .copyright {
+    max-width: unset;
   }
 }
 /*# sourceMappingURL=index.2212206d.css.map */

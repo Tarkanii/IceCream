@@ -134,6 +134,11 @@
 
         &__link {
             color: var(--secondary-text-color);
+            transition: var(--transition);
+
+            &:hover, &:focus {
+                color: var(--second-accent-color);
+            }
         }
     }
 }
