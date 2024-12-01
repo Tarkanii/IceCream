@@ -1,4 +1,13 @@
+body {
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+}
+
 img {
     display: block;
     max-width: 100%;
+}
+
+button:hover, button:focus {
+    cursor: pointer;
 }

@@ -2,10 +2,481 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=display-width, initial-scale=1.0">
-        <title>Ice Cream</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Titan+One&display=swap" rel="stylesheet">
         <script src="./js/index.js" defer type="module"></script>
+        <title>Ice Cream</title>
     </head>
     <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <a href="/" class="logo">
+                    <picture>
+                        <source srcset="./images/logo/logo.webp 1x, ./images/logo/logo@2x.webp 2x" type="image/webp">
+                        <source srcset="./images/logo/logo.png 1x, ./images/logo/logo@2x.png 2x" type="image/png">
+                        <img src="./images/logo/logo.png" alt="logo">
+                    </picture>
+                </a>
+                <nav class="header__nav">
+                    <ul class="nav-list">
+                        <li class="nav-list__element">
+                            <a href="/" class="nav-list__link selected">Home</a>
+                        </li>
+                        <li class="nav-list__element">
+                            <a href="#about" class="nav-list__link">About us</a>
+                        </li>
+                        <li class="nav-list__element">
+                            <a href="#how-made" class="nav-list__link">How it's made?</a>
+                        </li>
+                        <li class="nav-list__element">
+                            <a href="#products" class="nav-list__link">Our products</a>
+                        </li>
+                        <li class="nav-list__element">
+                            <a href="#contacts" class="nav-list__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="burger-button" id="menu-open">
+                    <svg class="burger-button__icon">
+                        <use href="./images/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+                <button class="button header__button">
+                    Buy now
+                    <svg class="button__icon">
+                        <use href="./images/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu">
+                    <button class="close-button" id="menu-close">
+                        <svg class="close-button__icon">
+                            <use href="./images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <div class="menu-button-wrapper">
+                        <button class="button button--menu">
+                            Buy now
+                            <svg class="button__icon">
+                                <use href="./images/sprite.svg#icon-arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <nav class="menu__nav">
+                        <ul class="menu__nav__list">
+                            <li class="menu__nav__list__element">
+                                <a class="menu__nav__list__link selected" href="/">Home</a>
+                            </li>
+                            <li class="menu__nav__list__element">
+                                <a class="menu__nav__list__link" href="#about">About us</a>
+                            </li>
+                            <li class="menu__nav__list__element">
+                                <a class="menu__nav__list__link" href="#how-made">How it's made?</a>
+                            </li>
+                            <li class="menu__nav__list__element">
+                                <a class="menu__nav__list__link" href="#products">Our products</a>
+                            </li>
+                            <li class="menu__nav__list__element">
+                                <a class="menu__nav__list__link" href="#contacts">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav> 
+                </div>
+            </div>
+            
+        </header>
+        <!-- Main Content -->
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <div class="hero__main-content">
+                            <div class="hero__title-wrapper">
+                                <h1 class="hero__title">ice cream<br/>made with<br/>
+                                    <span class="passion">passion</span>
+                                </h1>
+                                <div class="hero__buttons-wrapper">
+                                    <a class="products-button" href="#products">Products</a>
+                                    <a class="how-made-button" href="#how-made">How it's made?</a>
+                                </div>
+                            </div>
+                            
+                            <ul class="hero__cafes-list">
+                                <li class="hero__cafes-list__element">
+                                    <p class="amount">16</p>
+                                    <p class="type">cafes</p>
+                                </li>
+                                <li class="hero__cafes-list__element">
+                                    <p class="amount">23</p>
+                                    <p class="type">food trucks</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hero__additional-info">
+                            <p class="hero__additional-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                            <button class="hero__additional-info__button">
+                                <svg class="hero__additional-info__button__icon">
+                                    <use href="./images/sprite.svg#icon-pointer-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- Products -->
+            <section class="products" id="products">
+                <div class="container">
+                    <p class="section-subtitle">100% natural</p>
+                    <h2 class="section-title products__title">products</h2>
+                    <ul class="product-list">
+                        <li class="product-list__item ice-cream">
+                            <picture class="product-list__item__img">
+                                <!-- Desktop -->
+                                <source srcset="./images/products/desktop-ice-cream.webp 1x, ./images/products/desktop-ice-cream@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
+                                <source srcset="./images/products/desktop-ice-cream.png 1x, ./images/products/desktop-ice-cream@2x.png 2x" type="image/png" media="(min-width: 1200px)">
+                                <!-- Tablet -->
+                                <source srcset="./images/products/tablet-ice-cream.webp 1x, ./images/products/tablet-ice-cream@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                                <source srcset="./images/products/tablet-ice-cream.png 1x, ./images/products/tablet-ice-cream@2x.png 2x" type="image/png" media="(min-width: 768px)">
+                                <!-- Desktop -->
+                                <source srcset="./images/products/mobile-ice-cream.webp 1x, ./images/products/mobile-ice-cream@2x.webp 2x" type="image/webp">
+                                <source srcset="./images/products/mobile-ice-cream.png 1x, ./images/products/mobile-ice-cream@2x.png 2x" type="image/png">
+                                <img src="./images/products/mobile-ice-cream.png" alt="">
+                            </picture>
+                            <h3 class="product-list__item__name">ice cream</h3>
+                            <svg class="product-list__item__icon">
+                                <use href="./images/sprite.svg#icon-dots"></use>
+                            </svg>
+                            <p class="product-list__item__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            </p>
+                            <button class="product-list__item__button">
+                                <svg class="product-list__item__button__icon">
+                                    <use href="./images/sprite.svg#icon-pointer-right"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="product-list__item coffee">
+                            <picture class="product-list__item__img">
+                                <!-- Desktop -->
+                                <source srcset="./images/products/desktop-coffee.webp 1x, ./images/products/desktop-coffee@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
+                                <source srcset="./images/products/desktop-coffee.png 1x, ./images/products/desktop-coffee@2x.png 2x" type="image/png" media="(min-width: 1200px)">
+                                <!-- Tablet -->
+                                <source srcset="./images/products/tablet-coffee.webp 1x, ./images/products/tablet-coffee@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                                <source srcset="./images/products/tablet-coffee.png 1x, ./images/products/tablet-coffee@2x.png 2x" type="image/png" media="(min-width: 768px)">
+                                <!-- Desktop -->
+                                <source srcset="./images/products/mobile-coffee.webp 1x, ./images/products/mobile-coffee@2x.webp 2x" type="image/webp">
+                                <source srcset="./images/products/mobile-coffee.png 1x, ./images/products/mobile-coffee@2x.png 2x" type="image/png">
+                                <img src="./images/products/mobile-coffee.png" alt="">
+                            </picture>
+                            <h3 class="product-list__item__name">ice coffee</h3>
+                            <svg class="product-list__item__icon">
+                                <use href="./images/sprite.svg#icon-dots"></use>
+                            </svg>
+                            <p class="product-list__item__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            </p>
+                            <button class="product-list__item__button">
+                                <svg class="product-list__item__button__icon">
+                                    <use href="./images/sprite.svg#icon-pointer-right"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="product-list__item shake">
+                            <picture class="product-list__item__img">
+                                <!-- Desktop -->
+                                <source srcset="./images/products/desktop-shake.webp 1x, ./images/products/desktop-shake@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
+                                <source srcset="./images/products/desktop-shake.png 1x, ./images/products/desktop-shake@2x.png 2x" type="image/png" media="(min-width: 1200px)">
+                                <!-- Tablet -->
+                                <source srcset="./images/products/tablet-shake.webp 1x, ./images/products/tablet-shake@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                                <source srcset="./images/products/tablet-shake.png 1x, ./images/products/tablet-shake@2x.png 2x" type="image/png" media="(min-width: 768px)">
+                                <!-- Desktop -->
+                                <source srcset="./images/products/mobile-shake.webp 1x, ./images/products/mobile-shake@2x.webp 2x" type="image/webp">
+                                <source srcset="./images/products/mobile-shake.png 1x, ./images/products/mobile-shake@2x.png 2x" type="image/png">
+                                <img src="./images/products/mobile-shake.png" alt="">
+                            </picture>
+                            <h3 class="product-list__item__name">milkshakes</h3>
+                            <svg class="product-list__item__icon">
+                                <use href="./images/sprite.svg#icon-dots"></use>
+                            </svg>
+                            <p class="product-list__item__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            </p>
+                            <button class="product-list__item__button">
+                                <svg class="product-list__item__button__icon">
+                                    <use href="./images/sprite.svg#icon-pointer-right"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- How made -->
+            <section class="how-made" id="how-made">
+                <div class="container">
+                    <p class="section-subtitle">tradition and love</p>
+                    <h3 class="section-title how-made__title">how it's made?</h3>
+                    <div class="how-made__main-content">
+                        <picture class="how-made__main-content__img">
+                            <!-- Desktop -->
+                            <source srcset="./images/how-made/desktop-cow.webp 1x, ./images/how-made/desktop-cow@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
+                            <source srcset="./images/how-made/desktop-cow.png 1x, ./images/how-made/desktop-cow@2x.png 2x" type="image/png" media="(min-width: 1200px)">
+                            <!-- Tablet -->
+                            <source srcset="./images/how-made/tablet-cow.webp 1x, ./images/how-made/tablet-cow@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                            <source srcset="./images/how-made/tablet-cow.png 1x, ./images/how-made/tablet-cow@2x.png 2x" type="image/png" media="(min-width: 768px)">
+                            <!-- Mobile -->
+                            <source srcset="./images/how-made/mobile-cow.webp 1x, ./images/how-made/mobile-cow@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/how-made/mobile-cow.png 1x, ./images/how-made/mobile-cow@2x.png 2x" type="image/png">
+                            <img src="./images/how-made/mobile-cow.png" alt="">
+                        </picture>
+                        <div class="how-made__main-content__text-wrapper">
+                            <p class="how-made__main-content__text">
+                                Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+                            </p>
+                            <p class="how-made__main-content__text">
+                                Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
+                                <br><br>
+                                Aliquam erat volutpat. Aenean accumsan.
+                            </p>
+                            <button class="button">
+                                Read more
+                                <svg class="button__icon">
+                                    <use href="./images/sprite.svg#icon-arrow-right"></use>
+                                </svg>
+                            </button> 
+                        </div>
+                    </div>
+                    <ul class="how-made__additional-info">
+                        <li class="how-made__additional-info__element">
+                            <picture class="how-made__additional-info__element__icon">
+                                <source srcset="./images/how-made/milk.webp 1x, ./images/how-made/milk@2x.webp 2x" type="image/webp">
+                                <source srcset="./images/how-made/milk.png 1x, ./images/how-made/milk@2x.png 2x" type="image/png">
+                                <img src="./images/how-made/milk.png" alt="">
+                            </picture>
+                            <p class="how-made__additional-info__element__amount">721</p>
+                            <p class="how-made__additional-info__element__description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                        </li>
+                        <li class="how-made__additional-info__element">
+                            <picture class="how-made__additional-info__element__icon">
+                                <source srcset="./images/how-made/apples.webp 1x, ./images/how-made/apples@2x.webp 2x" type="image/webp">
+                                <source srcset="./images/how-made/apples.png 1x, ./images/how-made/apples@2x.png 2x" type="image/png">
+                                <img src="./images/how-made/apples.png" alt="">
+                            </picture>
+                            <p class="how-made__additional-info__element__amount">16kg</p>
+                            <p class="how-made__additional-info__element__description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                        </li>
+                        <li class="how-made__additional-info__element">
+                            <picture class="how-made__additional-info__element__icon">
+                                <source srcset="./images/how-made/lolipop.webp 1x, ./images/how-made/lolipop@2x.webp 2x" type="image/webp">
+                                <source srcset="./images/how-made/lolipop.png 1x, ./images/how-made/lolipop@2x.png 2x" type="image/png">
+                                <img src="./images/how-made/lolipop.png" alt="">
+                            </picture>
+                            <p class="how-made__additional-info__element__amount">84</p>
+                            <p class="how-made__additional-info__element__description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Reviews -->
+            <section class="reviews" id="about">
+                <h2 class="visually-hidden">Reviews</h2>
+                <picture class="reviews__collage">
+                    <!-- Desktop -->
+                    <source srcset="./images/reviews/desktop-collage.webp 1px, ./images/reviews/desktop-collage@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
+                    <source srcset="./images/reviews/desktop-collage.jpg 1px, ./images/reviews/desktop-collage@2x.jpg 2x" type="image/jpg" media="(min-width: 1200px)">
+                    <!-- Tablet -->
+                    <source srcset="./images/reviews/tablet-collage.webp 1px, ./images/reviews/tablet-collage@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+                    <source srcset="./images/reviews/tablet-collage.jpg 1px, ./images/reviews/tablet-collage@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+                    <!-- Mobile -->
+                    <source srcset="./images/reviews/mobile-collage.webp 1px, ./images/reviews/mobile-collage@2x.webp 2x" type="image/webp">
+                    <source srcset="./images/reviews/mobile-collage.jpg 1px, ./images/reviews/mobile-collage@2x.jpg 2x" type="image/jpg">
+                    <img src="./images/reviews/mobile-collage.jpg" alt="collage">
+                </picture>
+                <div class="container">
+                    <div class="slider">
+                        <ul class="reviews-list">
+                            <li class="review-list__element" data-client="c1">
+                                <picture class="review-list__element__img">
+                                    <source srcset="./images/reviews/client-1.webp 1x, ./images/reviews/client-1@2x.webp 2x" type="image/webp">
+                                    <source srcset="./images/reviews/client-1.png 1x, ./images/reviews/client-1@2x.png 2x" type="image/png">
+                                    <img src="./images/reviews/client-1.png" alt="client 1">
+                                </picture>
+                                <div class="review-list__element__quote-wrapper">
+                                    <svg class="quotes">
+                                        <use href="./images/sprite.svg#icon-quotes"></use>
+                                    </svg>
+                                    <p class="review-list__element__quote">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.</p>
+                                </div>
+                                <svg class="review-list__element__dots">
+                                    <use href="./images/sprite.svg#icon-reviews-dots" ></use>
+                                </svg>
+                                <p class="review-list__element__info">Emily, Los Angeles</p>
+                            </li>
+                            <li class="review-list__element" data-client="c2">
+                                <picture class="review-list__element__img">
+                                    <source srcset="./images/reviews/client-2.webp 1x, ./images/reviews/client-2@2x.webp 2x" type="image/webp">
+                                    <source srcset="./images/reviews/client-2.png 1x, ./images/reviews/client-2@2x.png 2x" type="image/png">
+                                    <img src="./images/reviews/client-2.png" alt="client 1">
+                                </picture>
+                                <div class="review-list__element__quote-wrapper">
+                                    <svg class="quotes">
+                                        <use href="./images/sprite.svg#icon-quotes"></use>
+                                    </svg>
+                                    <p class="review-list__element__quote">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.</p>
+                                </div>
+                                <svg class="review-list__element__dots">
+                                    <use href="./images/sprite.svg#icon-reviews-dots" ></use>
+                                </svg>
+                                <p class="review-list__element__info">Nicola, Chicago</p>
+                            </li>
+                            <li class="review-list__element" data-client="c3">
+                                <picture class="review-list__element__img">
+                                    <source srcset="./images/reviews/client-3.webp 1x, ./images/reviews/client-3@2x.webp 2x" type="image/webp">
+                                    <source srcset="./images/reviews/client-3.png 1x, ./images/reviews/client-3@2x.png 2x" type="image/png">
+                                    <img src="./images/reviews/client-3.png" alt="client 1">
+                                </picture>
+                                <div class="review-list__element__quote-wrapper">
+                                    <svg class="quotes">
+                                        <use href="./images/sprite.svg#icon-quotes"></use>
+                                    </svg>
+                                    <p class="review-list__element__quote">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.</p>
+                                </div>
+                                <svg class="review-list__element__dots">
+                                    <use href="./images/sprite.svg#icon-reviews-dots" ></use>
+                                </svg>
+                                <p class="review-list__element__info">Jane, New York</p>
+                            </li>
+                        </ul>
+                        <ul class="slider-button-list">
+                            <li class="slider-button-list__element"><button class="selected slider-button" data-id="1">
+                                <svg class="slider-button__icon">
+                                    <use href="./images/sprite.svg#icon-home"></use>
+                                </svg>
+                            </button></li>
+                            <li class="slider-button-list__element"><button class="slider-button" data-id="2"></button></li>
+                            <li class="slider-button-list__element"><button class="slider-button" data-id="3"></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Contacts -->
+            <section class="contacts" id="contacts">
+                <h2 class="visually-hidden">Contacts</h2>
+                <div class="container">
+                    <ul class="stores-list">
+                        <li class="stores-list__element">
+                            <h3 class="stores-list__element__type cafe">cafe</h3>
+                            <p class="stores-list__element__city">Chicago</p>
+                            <p class="stores-list__element__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                            <ul class="open-hours-list">
+                                <li class="open-hours-list__element">
+                                    <p class="open-hours-list__element__days">Monday - Friday</p>
+                                    <p class="open-hours-list__element__hours"><time>06:00</time> AM - <time>10:00</time> PM</p>
+                                </li>
+                                <li class="open-hours-list__element">
+                                    <p class="open-hours-list__element__days">Saturday - Sunday</p>
+                                    <p class="open-hours-list__element__hours"><time>08:00</time> AM - <time>04:00</time> PM</p>
+                                </li>
+                            </ul>
+                            <address class="stores-list__element__address">
+                                <a class="stores-list__element__address__link" href="tel:+61(0) 383 766 284 ">+61(0) 383 766 284</a>
+                                <a class="stores-list__element__address__link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                            </address>
+                        </li>
+                        <li class="stores-list__element">
+                            <h3 class="stores-list__element__type foodtruck">foodtruck</h3>
+                            <p class="stores-list__element__city">Los Angeles</p>
+                            <p class="stores-list__element__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                            <ul class="open-hours-list">
+                                <li class="open-hours-list__element">
+                                    <p class="open-hours-list__element__days">Monday - Friday</p>
+                                    <p class="open-hours-list__element__hours"><time>06:00</time> AM - <time>10:00</time> PM</p>
+                                </li>
+                                <li class="open-hours-list__element">
+                                    <p class="open-hours-list__element__days">Saturday - Sunday</p>
+                                    <p class="open-hours-list__element__hours"><time>08:00</time> AM - <time>04:00</time> PM</p>
+                                </li>
+                            </ul>
+                            <address class="stores-list__element__address">
+                                <a class="stores-list__element__address__link" href="tel:+61(0) 383 766 284 ">+61(0) 383 766 284</a>
+                                <a class="stores-list__element__address__link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                            </address>
+                        </li>
+                        <li class="stores-list__element">
+                            <h3 class="stores-list__element__type cafe">cafe</h3>
+                            <p class="stores-list__element__city">New York</p>
+                            <p class="stores-list__element__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+                            <ul class="open-hours-list">
+                                <li class="open-hours-list__element">
+                                    <p class="open-hours-list__element__days">Monday - Friday</p>
+                                    <p class="open-hours-list__element__hours"><time>06:00</time> AM - <time>10:00</time> PM</p>
+                                </li>
+                                <li class="open-hours-list__element">
+                                    <p class="open-hours-list__element__days">Saturday - Sunday</p>
+                                    <p class="open-hours-list__element__hours"><time>08:00</time> AM - <time>04:00</time> PM</p>
+                                </li>
+                            </ul>
+                            <address class="stores-list__element__address">
+                                <a class="stores-list__element__address__link" href="tel:+61(0) 383 766 284 ">+61(0) 383 766 284</a>
+                                <a class="stores-list__element__address__link" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                            </address>
+                        </li>
+                    </ul>
+                    <div class="contacts__buttons-container">
+                        <a class="contacts__button button button--accent" href="https://maps.app.goo.gl/HYbJCbEjCEM7HveU6" target="_blank">
+                            Our Locations
+                            <svg class="button__icon">
+                                <use href="./images/sprite.svg#icon-arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a class="contacts__button button" href="https://maps.app.goo.gl/wQfNTkGonqsgRqwT9" target="_blank">
+                            Franchise
+                            <svg class="button__icon">
+                                <use href="./images/sprite.svg#icon-arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer__container">
+                <p class="footer__slogan">homemade ice cream made<span class="passion">with passion</span></p>
+                <div class="footer__contacts">
+                    <ul class="footer__socials-list">
+                        <li class="footer__socials-list__element">
+                            <a class="footer__socials-list__element__link" href="/">
+                                <svg class="footer__socials-list__element__icon">
+                                    <use href="./images/sprite.svg#icon-github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__socials-list__element">
+                            <a class="footer__socials-list__element__link" href="/">
+                                <svg class="footer__socials-list__element__icon">
+                                    <use href="./images/sprite.svg#icon-telegram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__socials-list__element">
+                            <a class="footer__socials-list__element__link" href="/">
+                                <svg class="footer__socials-list__element__icon">
+                                    <use href="./images/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer__contacts__text">Feel free to contact <a class="footer__contacts__link" href="tel:+61 (0) 383 766 284">+61 (0) 383 766 284</a></p>
+                </div>
+            </div>
+            <div class="copyright-container">
+                <p class="copyright">&copy; 2019 - IceCream. All Rights Reserved. </p>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,0 +1,164 @@
+.how-made {
+    display: flex;
+    justify-content: center;
+    padding: 125px 0 139px;
+    background-color: var(--primary-bg);
+    background-image: url(../images/how-made/mobile-milk-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 320px 133px;
+
+    @include retina-display {
+        background-image: url(../images/how-made/mobile-milk-bg@2x.png);
+    }
+
+    @include tablet {
+        background-image: none;
+    }
+
+    @include desktop {
+        background-image: url(../images/how-made/desktop-milk-bg@2x.png);
+        background-size: 1282px 534px;
+    }
+}
+
+.how-made__title {
+    margin-bottom: 26px;
+
+    @include tablet {
+        margin-bottom: 50px;
+    }
+
+    @include desktop {
+        margin-bottom: 55px;
+    }
+}
+
+.how-made__main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 39px;
+
+    @include tablet {
+        flex-direction: row;
+        align-items: start;
+        margin-bottom: 66px;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 0 46px 0;
+
+        @include tablet {
+            margin: 0 17px 0 0;
+        }
+
+        @include desktop {
+            margin: 0 74px 0 0;
+        }
+    }
+
+    &__text {
+        color: var(--secondary-text-color);
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        max-width: 220px;
+
+        @include tablet {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 62px;
+            max-width: 340px;
+        }
+
+        @include desktop {
+            margin-bottom: 45px;
+            max-width: 463px;
+            letter-spacing: 0.7px;
+        }
+    }
+
+    &__text:first-child {
+        color: var(--primary-text-color);
+        margin-bottom: 35px;
+
+        @include desktop {
+            font-size: 16px;
+        }
+    }
+
+}
+
+.how-made__main-content__text-wrapper {
+    @include tablet {
+       padding-top: 50px; 
+    }
+    
+}
+
+.how-made__additional-info {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+    }
+}
+
+.how-made__additional-info__element {
+
+    &:not(:last-child) {
+        margin: 0 0 38px 0;
+
+        @include tablet {
+            margin: 0 60px 0 0;
+        }
+
+        @include desktop {
+            margin: 0 30px 0 0;
+        }
+    }
+
+    &__icon {
+        display: block;
+        margin-bottom: 15px;
+
+        @include tablet {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__amount {
+        color: var(--accent-color);
+        font-family: var(--special-font);
+        font-size: 36px;
+        margin-bottom: 10px;
+
+        @include tablet {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        @include desktop {
+            font-size: 58px;
+        }
+    }
+
+    &__description {
+        font-size: 12px;
+        font-weight: 700;
+        max-width: 230px;
+
+        @include tablet {
+            font-size: 14px;
+            max-width: 180px;
+        }
+
+        @include desktop {
+            font-size: 16px;
+            max-width: 330px;
+        }
+    }
+}
