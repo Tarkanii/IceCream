@@ -6,12 +6,15 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --dist-dir dist --public-url /IceCream/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.2",
+    "gh-pages": "^6.2.0",
     "parcel": "^2.13.2",
     "sass": "^1.81.0"
   }
