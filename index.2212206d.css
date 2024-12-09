@@ -256,7 +256,7 @@ button:hover, button:focus {
   display: flex;
 }
 
-.nav-list__link.selected, .nav-list__link:hover, .nav-list__link:focus {
+.nav-list__link:hover, .nav-list__link:focus {
   color: var(--accent-color);
 }
 
@@ -403,7 +403,7 @@ button:hover, button:focus {
   display: flex;
 }
 
-.menu__nav__list__link.selected, .menu__nav__list__link:hover, .menu__nav__list__link:focus {
+.menu__nav__list__link:hover, .menu__nav__list__link:focus {
   color: var(--accent-color);
 }
 
