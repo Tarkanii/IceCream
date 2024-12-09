@@ -63,7 +63,7 @@
         font-weight: 700;
         transition: color var(--transition);
 
-        &.selected, &:hover, &:focus {
+        &:hover, &:focus {
             color: var(--accent-color);
         }
     }
@@ -200,7 +200,7 @@
         font-weight: 700;
         transition: color var(--transition);
 
-        &.selected, &:hover, &:focus {
+        &:hover, &:focus {
             color: var(--accent-color);
         }
     }
